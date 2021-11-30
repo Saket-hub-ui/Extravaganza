@@ -4,33 +4,28 @@ class Extravaganza {
     
     getInfo() {
         return {
-            "id": "Fetch",
-            "name": "Fetch",
+            "id": "Extravaganza",
+            "name": "OP Blocks",
             "blocks": [
                         {
                             "opcode": "Extravaganza",
                             "blockType": "Extra Blocks",
-                            "text": "fetch data from [url]",
-                            "arguments": {
-                                "url": {
+                            "text": "Decode [decoder]",
+                            "arguments": { let decoded = decodeURI(decoder)
+                                "decoder": {
                                     "type": "string",
-                                    "defaultValue": "https://api.weather.gov/stations/KNYC/observations"
+                                    "defaultValue": "scrat"
                                 },
                             }
                         },
                         {
-                            "opcode": "jsonExtract",
-                            "blockType": "reporter",
-                            "text": "extract [name] from [data]",
-                            "arguments": {
-                                "name": {
+                            "opcode": "Extravaganza",
+                            "blockType": "Extra Blocks",
+                            "text": "Encode [encoder]",
+                            "arguments": { let encoded = encodeURI(encoded)
+                                "encoder": {
                                     "type": "string",
-                                    "defaultValue": "temperature"
-                                },
-                                "data": {
-                                    "type": "string",
-                                    "defaultValue": '{"temperature": 12.3}'
-                                },
+                                    "defaultValue": "scrat"                                },
                             }
                         },
                 ],
