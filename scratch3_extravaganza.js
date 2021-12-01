@@ -5,31 +5,27 @@ class Extravaganza {
     getInfo() {
         return {
             "id": "Fetch",
-            "name": "Fetch",
+            "name": "OP Blocks",
             "blocks": [
                         {
                             "opcode": "Extravaganza",
                             "blockType": "Extra Blocks",
-                            "text": "fetch data from [url]",
+                            "text": "Decode (decoder)"
                             "arguments": {
-                                "url": {
-                                    "type": "string",
-                                    "defaultValue": "https://api.weather.gov/stations/KNYC/observations"
+                                "decoder": {let decoded = decodeURI(decoder)
+                                    "type": "bollean",
+                                    "defaultValue": "hello"
                                 },
                             }
                         },
                         {
                             "opcode": "jsonExtract",
                             "blockType": "reporter",
-                            "text": "extract [name] from [data]",
-                            "arguments": {
-                                "name": {
-                                    "type": "string",
-                                    "defaultValue": "temperature"
-                                },
-                                "data": {
-                                    "type": "string",
-                                    "defaultValue": '{"temperature": 12.3}'
+                            "text": "Encode (encoder)",
+                            "arguments": { 
+                                "encoder": {let encoder = encoderURI(encoder
+                                    "type": "bollean",
+                                    "defaultValue": "hello"
                                 },
                             }
                         },
