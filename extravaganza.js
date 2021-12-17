@@ -5,35 +5,37 @@ class Extravaganza {
     getInfo() {
         return {
             "id": "Extravaganza",
-            "name": "OP Blocks",
+            "name": "Block Helps",
             "blocks": [
                         {
                             "opcode": "Extravaganza",
                             "blockType": "Extra Blocks",
-                            "text": "Decode [decoder]",
-                            "arguments": { let decoded = decodeURI(decoder)
-                                "decoder": {
-                                    "type": "string",
-                                    "defaultValue": "scrat"
+                            "text": "Glide [glideTo] seconds while changing x position by [changeX]",
+                            "arguments": {
+                                "glideTo": { 
+                                    "type": "number",
+                                    "defaultValue": "1"
+                
+                             "arguments": {
+                                "changeX": { 
+                                    "type": "number",
+                                    "defaultValue": "10"
+                
+                glideTo (args, util) {
+        const targetXY = this.getTargetX(args.TO, util);
+        if (targetXY) {
+            this.glide({SECS: args.SECS, X: targetX[changeX], util);
+            
+            changeX (args, util) {
+        const dx = Cast.toNumber(args.DX);
+        util.target.setXY(util.target.x + dx, util.target.y);
                                 },
                             }
                         },
-                        {
-                            "opcode": "Extravaganza",
-                            "blockType": "Extra Blocks",
-                            "text": "Encode [encoder]",
-                            "arguments": { let encoded = encodeURI(encoded)
-                                "encoder": {
-                                    "type": "string",
-                                    "defaultValue": "scrat"                                },
-                            }
-                        },
-                ],
-        };
-    }
-    
-    fetchURL({url}) {
-        return fetch(url).then(response => response.text())
+    {                                                
+   
+    extravaganzaURL({url}) {
+        return extravaganza(url).then(response => response.text())
     }
     
     jsonExtract({name,data}) {
